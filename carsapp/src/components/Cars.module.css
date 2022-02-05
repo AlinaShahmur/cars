@@ -1,0 +1,14 @@
+.cars {
+    display: flex;
+    flex-direction: column;
+}
+
+.cars__items {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    margin: 2rem;
+    flex-direction: column;
+}
+
+

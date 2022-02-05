@@ -1,0 +1,56 @@
+.dropdown-checklist {
+    margin-left: 10px;
+    position: relative;
+}
+
+.select {
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding-right:1.7rem;
+    cursor: pointer;
+    position: relative;
+}
+
+.items {
+    position: absolute;
+    display: none;
+    top: 6px;
+    border: 1px solid gray;
+    text-align: left;
+    padding-left: 0;
+    height: 150px;
+    overflow: scroll;
+    background-color: #fff;
+}
+
+.select::after {
+    content: '';
+    position: absolute;
+    padding: 5px;
+    right: 10px;
+    top: 20%;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+    transform: rotate(-135deg);
+}
+
+.items li {
+    list-style-type: none;
+}
+.items li input{
+    margin-right: 10px
+}
+
+.dropdown-checklist.visible .items {
+    display: block;
+}
+
+.dropdown-checklist.visible .select::after {
+    transform: rotate(45deg) translate(25%, 25%);
+}
+
+@media screen and (max-width: 768px) {
+    .dropdown-checklist {
+        margin: 1rem;
+    }
+}

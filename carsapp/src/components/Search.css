@@ -1,0 +1,82 @@
+.search {
+    margin: 2rem;
+    text-align: center;
+}
+
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.title h3 {
+    margin-right: 1rem;
+}
+
+.title button {
+    padding: 0;
+    display: inline;
+    border-radius: 50%;
+    text-align:center;
+    height: 25px;
+    width: 25px;
+    background-color: #3399ff;
+    border: #bfbfbf;
+    cursor: pointer;
+    position: relative;
+    margin-right: 0.5rem;
+}
+
+.title button:hover {
+    opacity: 0.7
+} 
+
+.title button svg {
+   position: absolute;
+   right: 50%;
+   top:50%;
+   height: 15px;
+   width: auto;
+   transform: translate(50%, -50%);
+   color: #fff;
+}
+
+.panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 4px rgba(0,0,0,0.1);
+    transform-origin: top;
+    transition: opacity 0.26s ease-in-out;
+    visibility: visible;
+}
+
+.panel .discard-btn {
+    padding: 0;
+    display: inline;
+    border-radius: 50%;
+    text-align:center;
+    height: 25px;
+    width: 25px;
+    background-color: #3399ff;
+    border: #bfbfbf;
+    cursor: pointer;
+    position: relative;
+    margin-right: 0.5rem;
+    color: white;
+}
+
+.panel.invisible {
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    left: -50%;
+    transform: translateX(50%);
+}
+
+@media screen and (max-width: 768px) {
+    .panel {
+        flex-direction: column;
+    }
+}

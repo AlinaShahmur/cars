@@ -1,0 +1,47 @@
+.search {
+    margin: 2rem;
+    text-align: center;
+
+}
+
+.title {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.title h3 {
+    margin-right: 1rem;
+}
+
+.title button {
+    padding: 0;
+    display: inline;
+    border-radius: 50%;
+    text-align:center;
+    height: 25px;
+    width: 25px;
+    background-color: #3399ff;
+    border: #bfbfbf;
+    cursor: pointer;
+    position: relative;
+    margin-right: 0.5rem;
+}
+
+.title button:hover {
+    opacity: 0.7
+} 
+
+.title button svg {
+   position: absolute;
+   right: 50%;
+   top:50%;
+   height: 15px;
+   width: auto;
+   transform: translate(50%, -50%);
+   color: #fff;
+}
+
+.panel {
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px 4px rgba(0,0,0,0.1)
+}

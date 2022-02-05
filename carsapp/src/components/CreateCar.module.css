@@ -1,0 +1,35 @@
+.create-car {
+    height: fit-content;
+    margin:0.5rem;
+    text-align: center;
+    margin:0 auto;
+}
+
+.create-car h2 {
+    clear: both;
+}
+
+.close-button{
+    float: right;
+    padding: 0;
+    display: inline;
+    border-radius: 50%;
+    text-align:center;
+    height: 25px;
+    width: 25px;
+    background-color: #ff6666;
+    border: #bfbfbf;
+    cursor: pointer;
+    position: relative;
+}
+
+.close-button svg {
+    color: #fff;
+    position: absolute;
+    height: 20px;
+    width: auto;
+    right:50%;
+    top:50%;
+    transform: translate(50%, -50%)
+}
+

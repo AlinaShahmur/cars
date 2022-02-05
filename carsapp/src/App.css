@@ -1,0 +1,8 @@
+.cars {
+    display: flex;
+    flex-direction: column;
+}
+
+.cars h1 {
+    text-align: center;
+}

@@ -1,0 +1,68 @@
+.label {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.label h3 {
+    margin:0 0 0 10px;
+}
+
+.label button {
+  position: relative;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    line-height:0px;
+    cursor: pointer;
+    border: 1px solid gray;
+}
+
+.label button:hover {
+    opacity: 0.7
+}
+
+.label button svg {
+  position: absolute;
+  right: 50%;
+  top:50%;
+  height: 15px;
+  width: auto;
+  transform: translate(50%, -50%);
+  color: gray;
+}
+
+.changed-cars {
+  transform-origin: top;
+  transition: opacity 0.26s ease-out;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.changed-cars.invisible {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  left: -50%;
+  transform: translateX(50%);
+}
+
+.bump {
+    animation: bump 700s ease-out
+}
+
+@keyframes bump {
+  0% {
+    color: #ff8080
+  }
+  25% {
+    color: #ff6666
+  }
+  50% {
+    color: #ff4d4d
+  }
+  100% {
+    color: #ff3333
+  }
+}
