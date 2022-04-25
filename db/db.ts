@@ -1,7 +1,8 @@
-const mongoose = require('mongoose');
-require('dotenv').config();
-const DB = process.env.DB
-mongoose.connect(DB)
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+dotenv.config();
+
+mongoose.connect(process.env.DB_STRING)
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));

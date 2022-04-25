@@ -1,10 +1,13 @@
-const express = require('express');
+import express from 'express';
+import cors from 'cors';
+import carRouter  from './routes/carRouter';
+
 const app = express();
-const cors = require('cors');
-const carRouter = require('./routers/carRouter')
+const path = require('path');
+require('dotenv').config();
+require('./db/db')
 const PORT = process.env.PORT || 8000
 
-require('./db/db')
 app.use(cors())
 app.use(express.json())
 app.use('/api/cars', carRouter)
@@ -18,5 +21,5 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 app.listen(PORT, () => {
-    console.log('listening on 8000')
+    console.log(`Listening on port ${PORT}`)
 })

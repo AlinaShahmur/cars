@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "module": "commonjs",
+      "esModuleInterop": true,
+      "target": "es6",
+      "moduleResolution": "node",
+      "sourceMap": true,
+      "outDir": "dist"
+    },
+    "types": ["node"],
+    "lib": ["es2015"],
+    "watchOptions": {
+        "watchFile": "useFsEvents",
+        "watchDirectory": "useFsEvents",
+        "fallbackPolling": "dynamicPriority",
+        "synchronousWatchDirectory": true,
+        "excludeDirectories": ["**/node_modules", "carsapp"],
+        "excludeFiles": ["build/fileWhichChangesOften.ts"]
+      }
+}
