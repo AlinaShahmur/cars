@@ -3,14 +3,12 @@ import dataFromServer from './utils/dataFromServer';
 import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import Cars from './components/Cars';
-import ChangedCars from './components/ChangedCars/ChangedCars';
 import CreateCar from './components/CreateCar';
 import Header from './components/Header';
 
 function App() {
   const dispatch = useDispatch()
   const [isAddCarVisible, setIsAddCarVisible] = useState(false)
-  const [isChangedCarsVisible, setIsChangedCarsVisible] = useState(false)
   useEffect(() => {
     dataFromServer.getAllItems('http://localhost:8000/api/cars').then(data => {
       let cars = []
@@ -27,17 +25,13 @@ function App() {
 
   return (
     <div className="cars">
-      <Header onToggleChangedCars = {() => setIsChangedCarsVisible(!isChangedCarsVisible)} 
+      <Header 
               clickCreateCarHandler = {() => setIsAddCarVisible(!isAddCarVisible)}
       />
       {isAddCarVisible && <CreateCar 
                           onClose = {closeCreateCarHandler}
                           />}
       <Cars/>
-      <ChangedCars 
-         isVisible = {isChangedCarsVisible}
-        closeButtonHandler = {() => setIsChangedCarsVisible(false)}
-      />
 
     </div>
   );
